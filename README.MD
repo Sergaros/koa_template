@@ -2,9 +2,10 @@
 This app cam be used as start point of any koa2 application.
 
 Don't forget install all needed dependencies before run/test application:
-    ```
-     project_folder> npm install
-    ```
+
+```
+ project_folder> npm install
+```
 ***
 #### Start application:
     ```
