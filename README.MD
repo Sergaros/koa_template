@@ -18,7 +18,7 @@ Don't forget install all needed dependencies before run/test application:
 ***
 ####Project Structure:
     ```
-        [project_folder]
+        /*[project_folder]
                         |___[client]    //folder contains all client
                         |___[config]    //this folder used by config package
                         |          |___default.json     //default properties configuration
@@ -32,7 +32,7 @@ Don't forget install all needed dependencies before run/test application:
                         |            |___static.js      //koa-static www.npmjs.com/package/koa-static
                         |___[routes]    //routes modules
                         |___[tests]     //bdd tests files
-                        |___server.js   //main app file
+                        |___server.js   //main app file*/
     ```
 ***
 ####Main points
