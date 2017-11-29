@@ -1,11 +1,14 @@
 {
   "name": "koa_template",
   "version": "1.0.0",
-  "description": "empty template of the Koa2 app",
+  "engines": {
+    "node": "<=7"
+  },
+  "description": "Empty koa template app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --harmony server.js"
+    "start": "node --harmony server.js",
+    "test": "mocha --harmony -u bdd -R spec -t 500 --recursive --watch"
   },
   "keywords": [
     "koa"
@@ -13,12 +16,18 @@
   "author": "Sergaros",
   "license": "ISC",
   "dependencies": {
-    "config": "^1.25.1",
-    "koa": "^2.1.0",
-    "koa-bodyparser": "^4.1.0",
+    "config": "^1.28.1",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
     "koa-favicon": "^2.0.0",
-    "koa-logger": "^2.0.1",
-    "koa-router": "^7.0.1",
-    "koa-static": "^3.0.0"
+    "koa-logger": "^3.1.0",
+    "koa-router": "^7.3.0",
+    "koa-session": "^5.5.1",
+    "koa-static": "^4.0.2"
+  },
+  "devDependencies": {
+    "expect": "^21.2.1",
+    "mocha": "^4.0.1",
+    "supertest-koa-agent": "^0.3.0"
   }
 }

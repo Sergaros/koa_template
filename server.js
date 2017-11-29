@@ -1,20 +1,32 @@
 const Koa = require('koa');
+const config = require('config');
 const app = new Koa();
 
-const config = require('config');
+// trust proxy
+app.proxy = true
 
-const path = require('path');
-const fs = require('fs');
+//middlewares
+require('./handlers/favicon')(app);
+require('./handlers/static')(app);
+require('./handlers/logger')(app);
+require('./handlers/error')(app);
+require('./handlers/body_parser')(app);
+require('./handlers/session')(app);
 
-const handlers = fs.readdirSync(path.join(__dirname, 'handlers')).sort();
-handlers.forEach(handler => require('./handlers/' + handler).init(app));
-
+// routes
+const fs    = require('fs');
 const Router = require('koa-router');
 const router = new Router();
 
-//require('./routes/some_rout')(router);
-//router.post('/api/login', require('./routes/login').post);
+require('./routes/error')(router);
+require('./routes/content')(router);
 
 app.use(router.routes());
 
-app.listen(config.get('port'));
+// start server
+const port = process.env.PORT || config.get('port');
+
+if(require.main === module)
+    app.listen(port, () => console.log('Server listening on', port))
+else
+    module.exports = app;
