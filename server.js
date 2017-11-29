@@ -14,7 +14,6 @@ require('./handlers/body_parser')(app);
 require('./handlers/session')(app);
 
 // routes
-const fs    = require('fs');
 const Router = require('koa-router');
 const router = new Router();
 

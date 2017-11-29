@@ -16,7 +16,7 @@ Don't forget install all needed dependencies before run/test application:
 #### Start application tests:
 
 ```
- project_folder> npm start
+ project_folder> npm test
 ```
 ***
 #### Project Structure:
