@@ -6,17 +6,17 @@ Don't forget install all needed dependencies before run/test application:
      project_folder> npm install
     ```
 ***
-####Start application:
+#### Start application:
     ```
      project_folder> npm start
     ```
 ***
-####Start application tests:
+#### Start application tests:
     ```
      project_folder> npm start
     ```
 ***
-####Project Structure:
+#### Project Structure:
     ```
         /*[project_folder]
                         |___[client]    //folder contains all client
@@ -35,7 +35,7 @@ Don't forget install all needed dependencies before run/test application:
                         |___server.js   //main app file*/
     ```
 ***
-####Main points
+#### Main points
     * Create koa app:
         ```javascript
         const Koa = require('koa');
